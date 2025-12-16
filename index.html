@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raamatuotsing</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Raamatuotsing 1000.2</h1>
+            <p>Demo: fetch, JSON, render, localStorage, ajalugu, lemmikud</p>
+        </header>
+
+        <section class="panel">
+            <form id="searchForm" class="search">
+                <input id="searchInput" type="text" placeholder="Sisesta otsing (nt 'hobbit')" autocomplete="off" />
+                <button type="submit">Otsi</button>
+            </form>
+
+            <div class="grid">
+                <section>
+                    <h2>Otsinguajalugu</h2>
+                    <ul id="historyList" class="list"></ul>
+                    <button id="clearHistoryBtn" class="secondary">
+                        Tühjenda ajalugu</button>
+                </section>
+
+                <section>
+                    <h2>Lemmikud</h2>
+                    <ul id="favouritesList" class="list"></ul>
+                    <button id="clearFavouritesBtn" class="secondary">
+                        Tühjenda lemmikud</button>
+                </section>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Tulemused</h2>
+            <div id="results" class="results"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
