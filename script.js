@@ -14,3 +14,33 @@ const STORAGE_KEYS = {
 }
 
 let lastResults = []
+
+
+
+// saving and writing stuff to localStorage
+
+function saveToStorage(key, data) {
+  localStorage.setItem(key, JSON.stringify(data))   
+}
+
+function loadFromStorage(key) {
+  const dataStr = localStorage.getItem(key)
+  if (dataStr) {
+    return JSON.parse(dataStr)
+  } else {
+    return []
+  }
+}
+function readFromStorage(key, fallback) {
+  const raw = localStorage.getItem(key)
+  if (!raw) return fallback
+  try {
+    return JSON.parse(raw)
+  } catch {
+    return fallback
+  }
+}
+
+function writeToStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value))
+}
